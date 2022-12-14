@@ -32,14 +32,14 @@ func main() {
 	}
 
 	config := &ssh.ClientConfig{
-		User: "username",
+		User: "mmRoshani",
 		Auth: []ssh.AuthMethod{
 			// Use the PublicKeys method for remote authentication.
 			ssh.PublicKeys(signer),
 		},
 		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
 	}
-	client, err := ssh.Dial("tcp", "localhost:22", config)
+	client, err := ssh.Dial("tcp", "localhost:2030", config)
 	if err != nil {
 		panic("ERROR> Failed to dial|\n" + err.Error())
 	}
